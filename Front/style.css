@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body
+{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+a:link 
+{ 
+ text-decoration:none; 
+} 
+
+/* Barre de Navigation */
+
+nav
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+}
+
+nav img
+{
+    max-width: 25%;
+	height: auto;
+}
+
+nav .onglets
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav .onglets p
+{
+    font-size: 17px;
+    margin-right: 10px;
+    cursor: pointer;
+
+}
+
+nav .onglets p a
+{
+    text-decoration: none;
+    color: black;
+}
+
+nav .onglets input
+{
+    margin: 8px 20px;
+    padding: 15px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    background-color: #f2f2f2;
+
+}
+
+/* Fin de la barre de navigation */
+
+/* Header */
+
+header
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header h1
+{
+    font-size: 26px;
+    max-width: 600px;
+    text-align: center;
+}
+
+header button
+{
+    padding: 15px 20px;
+    font-size: 20px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Fin du header */
+
+/* Section Principal */
+
+.main
+{
+    margin: 20px;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Toutes les cartes */
+.cards
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+ 
+.cards .card
+{
+    margin-right: 20px;
+    margin-bottom: 55px;
+    cursor: pointer;
+}
+
+.cards .card img
+{
+    width: 550px;
+}
+
+.cards .card .card-header
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.cards .card .card-body p
+{
+    margin-top: -7px;
+    width: 550px;
+
+}
+
+/* Fin de toutes les cartes */
+/* Fin de la section principal */
+
+/* Footer */
+footer
+{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    color: #fff;
+    background-color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.centrale
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+.centrale section
+{
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    padding: 0 10px;
+}
+
+#footer_paiement
+{
+    font-size: 40px;
+}
+
+#copyright
+{
+    padding: 0 10px;
+    width: 100%;
+    margin: 35px auto;
+    text-align: center;
+    justify-content: center;
+}
+
+.centrale section a
+{
+    text-decoration: none;
+    color: white;
+}
+
+/* Fin du Footer */
