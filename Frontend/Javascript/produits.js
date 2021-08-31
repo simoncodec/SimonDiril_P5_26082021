@@ -13,6 +13,7 @@ fetch(newId)
     .then ((produit) => {
         produitsFiche(produit);
         lensesChoice(produit);
+        ajoutPanier();
     })
 
     .catch(function(error) {
@@ -29,14 +30,57 @@ function produitsFiche(produit)
 
 }
 
-function lensesChoice(produit)
+function lensesChoice(product) 
 {
-    let choixObjectif = document.getElementById("choixObjectif");
-    console.log("choixObjectif");
-    for (let i = 0; i < produit.lenses.lenght; i++)
+    const versionChoice = document.getElementById("choixObjectif");
+    for (let lenses of product.lenses) 
     {
-        let option = document.createElement("option");
-        option.innerText = produit.lenses[i];
-        choixObjectif.appendChild(option);
+        versionChoice.innerHTML += `<option value="${lenses}">${lenses}</option>`;
     }
+}
+
+//function addBasket()
+//{
+   // const buttonAddBasket = document.getElementById("btnAjoutPanier");
+//}
+//
+
+function ajoutPanier() {
+    // création de la constante du btn
+    const btnAjoutPanier = document.getElementById("btnAjoutPanier");
+    // écoute de l'evenement clic sur le btn d'ajout au panier 
+    btnAjoutPanier.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        // création constante pour choix de la couleur et récupération de la valeur
+        const idCouleur = document.getElementById("choixObjectif");
+        const choixObjectif = idCouleur.value;
+
+        // création constante pour choix de la quantité et récupération de la valeur
+        const idQuantite = document.getElementById("quantite");
+        const choixQuantite = idQuantite.value;
+
+        // création de l'obet pour l'ajout au panier
+        let newProduit = {
+            imageUrl: produitImage.innerHTML,
+            name: produitNom.innerHTML,
+            price: parseFloat(produitPrix.innerHTML),
+            lenses: choixObjectif,
+            quantite: choixQuantite,
+            _id: urlID
+        };
+
+        // déclaration d'une variable pour l'enregistrement des donnéesKey et value dans le localstorage
+        // utilisation de JSON.PARSE pour récupérer les données présentes dans localstorage
+        let produitAjoute = JSON.parse(localStorage.getItem("produit"));
+        // si produits dans le localstorage
+
+        if (produitAjoute < 1) {
+            // Déclaration du tableau ou seront stockés les choix produits
+            produitAjoute = [];
+        }
+        produitAjoute.push(newProduit);
+        localStorage.setItem("produit", JSON.stringify(produitAjoute));
+
+    });
 }
