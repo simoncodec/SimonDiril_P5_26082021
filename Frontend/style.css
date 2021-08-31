@@ -80,14 +80,18 @@ header
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color:#6c757d;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 header h1
 {
-    font-size: 26px;
     max-width: 600px;
     text-align: center;
 }
+
 
 header button
 {
@@ -108,44 +112,13 @@ header button
     margin: 20px;
     margin-top: 80px;
     display: flex;
-    flex-direction: column;
+    flex-flow: wrap;
     justify-content: center;
     align-items: center;
 }
 
 /* Toutes les cartes */
-.cards
-{
-    display: flex;
-    flex-wrap: wrap;
-}
- 
-.cards .card
-{
-    margin-right: 20px;
-    margin-bottom: 55px;
-    cursor: pointer;
-}
 
-.cards .card img
-{
-    width: 550px;
-}
-
-.cards .card .card-header
-{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-}
-
-.cards .card .card-body p
-{
-    margin-top: -7px;
-    width: 550px;
-
-}
 
 /* Fin de toutes les cartes */
 /* Fin de la section principal */

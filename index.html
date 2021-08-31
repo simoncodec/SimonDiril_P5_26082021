@@ -8,21 +8,21 @@
     <meta name="keywords" content="seo, appareil photo, vente, livraison, appareil, photo, ancien, orinoco">
     <meta name="description" content="Orinoco, Fournisseur leader d'appareil photo pour les professionnelles et pour les particuliers">
     
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./Frontend/style.css">
     <script src="https://kit.fontawesome.com/4ad49b3714.js" crossorigin="anonymous"></script>
 
     <!-- Titre de la page d'acceuil -->
-    <title>Produit - Orinoco</title>
+    <title>Acceuil - Orinoco</title>
 </head>
 <body>
     
     <!-- Barre de navigation -->
     <nav>
-        <img src="../Backend/images/logo-Orinoco.png" alt="Orinoco">
+        <img src="./Frontend/images/logo-Orinoco.png" alt="Orinoco">
         <div class="onglets">
-            <a class="link" href="../index.html">Accueil</a>
-            <a class="link" href="panier.html">Panier</a>
-            <a class="link" href="produit.html">Produit</a>
+            <a class="link" href="index.html">Accueil</a>
+            <a class="link" href="Frontend/panier.html">Panier</a>
+            <a class="link" href="Frontend/produit.html">Produit</a>
             <form>
                 <input type="search" placeholder="Rechercher">
             </form>
@@ -34,42 +34,17 @@
     <!-- Header -->
 
     <header>
-        <h1>Derniers produits</h1>
-        <h2>Découvrez les nouveaux produits Orinoco, conçus pour vous aider à créer des histoires inoubliables</h2>
+        <h1>Bienvenue sur Orinoco</h1>
+        <h3>Soyez plus rapide. Soyez meilleur. Le nouvel appareil photo hybride professionnel haute performance.</h3>
+        <button> Naviguer <i class="fas fa-camera-retro"></i></button>
     </header>
 
     <!-- Fin du Header -->
 
     <!-- Section Principale -->
 
-    <section>
-        <div id="produits">
-            <div id="imageProduit"></div>
-            <div class="produit_nomprix">
-                <div id="nomProduit"></div>
-                <div id="prixProduit"></div>
-            </div>
-            <div id="descriptionProduit"></div>
-            <div class="option_couleurquantite">
-                <div id="objectifProduit">
-                    <label for="choixObjectif">Objectif :</label>
-                    <select name="objectif" id="choixObjectif"></select>
-                </div>
-                <form id="quantiteProduit">
-                    <select id="quantite">
-                    <option selected value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                </select>
-                </form>
-                <div class="addpanier">
-                    <button id="btnAjoutPanier" type="submit" name="btnAjoutPanier">Ajouter au panier</button>
-                </div>
-            </div>
+    <section id="liste">
 
-
-        </div>
     </section>
 
     <!-- Fin de Section Principale -->
@@ -108,7 +83,7 @@
     
     </footer>
     <!-- Fin du Footer -->
+<script src="./Frontend/Javascript/index.js"></script>
 
-<script src="../Frontend/Javascript/produits.js"></script>
 </body>
 </html>
