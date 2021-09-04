@@ -158,6 +158,12 @@ header button
     max-width: 900px;
 }
 
+.btnMore
+{
+    color: black;
+    padding: 9px;
+    border-radius: 5px;
+}
 
 /* Fin de la section principal */
 

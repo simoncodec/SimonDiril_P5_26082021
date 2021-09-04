@@ -39,11 +39,6 @@ function lensesChoice(product)
     }
 }
 
-//function addBasket()
-//{
-   // const buttonAddBasket = document.getElementById("btnAjoutPanier");
-//}
-//
 
 function ajoutPanier() {
     // création de la constante du btn
