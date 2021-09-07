@@ -40,7 +40,8 @@ function lensesChoice(product)
 }
 
 
-function ajoutPanier() {
+function ajoutPanier() 
+{
     // création de la constante du btn
     const btnAjoutPanier = document.getElementById("btnAjoutPanier");
     // écoute de l'evenement clic sur le btn d'ajout au panier 
@@ -48,8 +49,8 @@ function ajoutPanier() {
         event.preventDefault();
 
         // création constante pour choix de la couleur et récupération de la valeur
-        const idCouleur = document.getElementById("choixObjectif");
-        const choixObjectif = idCouleur.value;
+        const idObjectif = document.getElementById("choixObjectif");
+        const choixObjectif = idObjectif.value;
 
         // création constante pour choix de la quantité et récupération de la valeur
         const idQuantite = document.getElementById("quantite");
