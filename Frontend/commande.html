@@ -13,7 +13,7 @@
     <script src="https://kit.fontawesome.com/4ad49b3714.js" crossorigin="anonymous"></script>
 
     <!-- Titre de la page d'acceuil -->
-    <title>Produit - Orinoco</title>
+    <title>Panier - Orinoco</title>
 </head>
 <body>
     
@@ -31,46 +31,22 @@
     </nav>
     <!-- Fin de la barre de navigation -->
 
-    <!-- Header -->
-
-    <header>
-        <h1>Derniers produits</h1>
-        <h2>Découvrez les nouveaux produits Orinoco, conçus pour vous aider à créer des histoires inoubliables</h2>
-    </header>
-
-    <!-- Fin du Header -->
 
     <!-- Section Principale -->
-
-    <section>
-        <div id="produits">
-            <div id="imageProduit"></div>
-            <div class="produit_nomprix">
-                <div id="nomProduit"></div>
-                <div id="prixProduit"></div>
+    <main>
+        <section class="confirmation">
+            <div class="remerciements">
+                <h2>Orinoco vous remercie de votre commande!</h2>
+                <p class="livraison">Vos appareil arriverons bientôt chez vous.
+                    </br>Nous espérons vous revoir très vite!
+                    </br>Toute l'équipe Orinoco.
+                </p>
             </div>
-            <div id="descriptionProduit"></div>
-            <div class="option_couleurquantite">
-                <div id="objectifProduits">
-                    <label for="choixObjectif">Objectif :</label>
-                    <select name="objectif" id="choixObjectif"></select>
-                </div>
-                <form id="quantiteProduit">
-                    <select id="quantite">
-                    <option selected value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                </select>
-                </form>
-                <div class="addpanier">
-                    <button id="btnAjoutPanier" type="submit" name="btnAjoutPanier">Ajouter au panier</button>
-                </div>
-            </div>
+            <div id="recapitulatif"></div>
 
-
-        </div>
-    </section>
+            <a href="../index.html"><button id="retourAccueil">Accueil</button></a>
+        </section>
+    </main>
 
     <!-- Fin de Section Principale -->
 
@@ -108,10 +84,9 @@
     
     </footer>
     <!-- Fin du Footer -->
-<script src="./Javascript/index.js"></script>
-<script src="./Javascript/produits.js"></script>
+
+<script src="./Javascript/commande.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-
 </body>
 </html>

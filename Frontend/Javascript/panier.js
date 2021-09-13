@@ -1,4 +1,4 @@
-// utilisation de JSON.PARSE pour récupérer les données présentes dans localstorage
+////// utilisation de JSON.PARSE pour récupérer les données présentes dans localstorage
 let localS = JSON.parse(localStorage.getItem("produit"));
 
 main();
@@ -12,9 +12,8 @@ function main() {
 }
 
 
-
 function afficherPanier() {
-    ////// récupération des variables
+    ////// récupération de mes variables
     const panierPlein = document.getElementById("panierPlein");
     const formulaireCommande = document.getElementById("formulaireCommande");
     const panierVide = document.getElementById("panierVide");
@@ -44,6 +43,33 @@ function afficherPanier() {
     }
 }
 
+// calcul du montant total du panier
+function totalPanier() {
+    // récupération de l'id ou est afficher le total
+    let totalPanier = document.getElementById("totalPanier");
+    // utilisation d'un tableau pour stocker les prix de chaque produits
+    let tableauListePrix = [];
+    for (let j = 0; j < localS.length; j++) {
+        prixProduitsPanier = localS[j].price * localS[j].quantite;
+
+        //Calcul du prix total de tous les produits
+        tableauListePrix.push(prixProduitsPanier);
+    }
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+    tableauListePrix = tableauListePrix.reduce(reducer);
+
+    totalPanier.innerText = `${(tableauListePrix = new Intl.NumberFormat(
+        "fr-FR",
+        {
+          style: "currency",
+          currency: "EUR",
+        }
+      ).format(tableauListePrix))}`;
+
+      localStorage.setItem("prixTotal", JSON.stringify(tableauListePrix));
+}
+
+
 //fonction pour vider le panier lorsque le client appuie sur vider le panier
 function viderPanier() {
     const btnViderPanier = document.getElementById("viderPanier");
@@ -54,15 +80,16 @@ function viderPanier() {
     });
 }
 
-function afficherFormulaire()
-{
-    const btnValidationPanier = document.getElementById("validationCommande");
+// fonction pour l'affichage du formulaire lorsque le client appuie sur valider panier
+function afficherFormulaire() {
+    const btnValidationPanier = document.getElementById("validationPanier");
     const formulaireCommande = document.getElementById("formulaireCommande");
     btnValidationPanier.addEventListener("click", (e) => {
         e.preventDefault;
         formulaireCommande.classList.toggle("d-none");
     });
 }
+
 
 function validationFormulaireCommande() {
     const validationCommande = document.getElementById("order");
@@ -97,34 +124,36 @@ function validationFormulaireCommande() {
             console.log(produitsCommandes);
 
             // création d'une constante rassemblant formulaire et produits 
-                            const order = {
-                                contact: {
-                                    firstName: nom.value,
-                                    lastName: prenom.value,
-                                    address: adresse.value,
-                                    city: ville.value,
-                                    email: email.value,
-                                },
-                                products: products,
-                            };
-                            console.log(order)
+            const order = {
+                contact: {
+                    firstName: nom.value,
+                    lastName: prenom.value,
+                    address: adresse.value,
+                    city: ville.value,
+                    email: email.value,
+                },
+                products: products,
+            };
+            console.log(order);
 
-                        // Envoi de la requete POST pour le backend
-                        fetch("http://localhost:3000/api/teddies/order", {
-                            method: "POST",
-                            body: JSON.stringify(order),
-                            headers: { "Content-Type": "application/json" },
-                        })
-                        .then((response) => response.json())
-                        .then((data) => {
-                            console.log(data)
-                            localStorage.setItem("orderId", data.orderId);
-        
-                            // envoi vers la page de confirmation
-                            document.location.href = "commande.html";
-        
-                        })
-                        .catch((erreur) => console.log("erreur : " + erreur));
-                }
-            });
+
+
+            // Envoi de la requete POST pour le backend
+            fetch("http://localhost:3000/api/cameras/order", {
+                    method: "POST",
+                    body: JSON.stringify(order),
+                    headers: { "Content-Type": "application/json" },
+                })
+                .then((response) => response.json())
+                .then((data) => {
+                    console.log(data)
+                    localStorage.setItem("orderId", data.orderId);
+
+                    // envoi vers la page de confirmation
+                    document.location.href = "commande.html";
+
+                })
+                .catch((erreur) => console.log("erreur : " + erreur));
         }
+    });
+}
