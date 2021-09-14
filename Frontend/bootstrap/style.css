@@ -107,63 +107,6 @@ header button
 
 /* Section Principal */
 
-#liste
-{
-    margin: 20px;
-    margin-top: 80px;
-    display: flex;
-    flex-flow: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Toutes les cartes */
-
-
-.border
-{
-    margin: 20px;
-    margin-bottom: 55px;
-    cursor: pointer;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
- 
-}
-
-.border img
-{
-    width: 550px;
-    padding: 3px;
-    border-radius: 8px;
-    border: solid 1px #6c757d;
-}
-
-.border h3 h4
-{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: -7px;
-    width: 550px;
-
-}
-
-#imageProduit img
-{
-    max-width: 900px;
-}
-
-.btnMore
-{
-    color: black;
-    padding: 9px;
-    border-radius: 5px;
-}
 
 /* Fin de la section principal */
 
