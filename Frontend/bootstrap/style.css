@@ -8,7 +8,6 @@ body
 }
 
 
-
 a:link 
 { 
  text-decoration:none; 
@@ -16,59 +15,11 @@ a:link
 
 /* Barre de Navigation */
 
-nav
+.d-inline-block
 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 20px;
-    position: sticky;
-    top: 0;
-    background-color: #fff;
+    width: 300px;
 }
 
-nav img
-{
-    max-width: 25%;
-	height: auto;
-}
-
-nav .onglets
-{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-nav .onglets a
-{
-    font-size: 17px;
-    margin-right: 10px;
-    cursor: pointer;
-    margin-top: 15px;
-
-}
-
-nav .onglets a
-{
-    text-decoration: none;
-    color: black;
-}
-
-nav .onglets input
-{
-    margin: 8px 20px;
-    padding: 15px;
-    border-radius: 30px;
-    border: none;
-    outline: none;
-    background-color: #f2f2f2;
-
-}
-
-nav .onglets a
-{
-    margin-top: 20px;
-}
 
 /* Fin de la barre de navigation */
 
