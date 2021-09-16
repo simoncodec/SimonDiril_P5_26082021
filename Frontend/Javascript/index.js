@@ -16,13 +16,13 @@ fetch ('http://localhost:3000/api/cameras')
 function getListeProduit(data){
     for (produit of data){
         let liste = document.getElementById("liste");
-        liste.innerHTML +=             `<div class="container">
-        <div class="col-sm-12 col-md-6 col-lg-6 pb-3  ">
-                <img src="${produit.imageUrl}" class="img-fluid" alt="${produit.name}">
-                <h3 class="card-title">${produit.name}</h3>
-                <h4 class="card-title price">${produit.price}</h4>
-                <a class="btn" href="./Frontend/produit.html?_id=${produit._id}"><button class="btnMore"> Acheter ce produits </button></a>
-        <div>
-    </div>`;
+        liste.innerHTML +=             `<div class="row mx-3 my-4" style="width: 40rem;">
+        <img src="${produit.imageUrl}" class="card-img-top" alt="${produit.name}">
+        <div class="card-body">
+          <h5 class="card-title">${produit.name}</h5>
+          <p class="card-text">${produit.price}</p>
+          <a href="./Frontend/produit.html?_id=${produit._id}" class="btn btn-primary stretched-link"> Acheter ce produits </a>
+        
+      </div>`;
     }
 }

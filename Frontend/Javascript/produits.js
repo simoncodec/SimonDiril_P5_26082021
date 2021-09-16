@@ -3,7 +3,7 @@ const urlID = params.get('_id');
 
 const newId = "http://localhost:3000/api/cameras/" + urlID;
 
-let produitImage = document.getElementById("imageProduit");
+let produitImage = document.getElementById("imgProduit");
 let produitNom = document.getElementById("nomProduit"); 
 let produitDescription = document.getElementById("descriptionProduit");
 let produitPrix = document.getElementById("prixProduit");
@@ -48,7 +48,7 @@ function ajoutPanier()
     btnAjoutPanier.addEventListener("click", (event) => {
         event.preventDefault();
 
-        // création constante pour choix de la couleur et récupération de la valeur
+        // création constante pour choix de l'objectif et récupération de la valeur
         const idObjectif = document.getElementById("choixObjectif");
         const choixObjectif = idObjectif.value;
 

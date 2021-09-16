@@ -9,7 +9,7 @@
     <meta name="description" content="Orinoco, Fournisseur leader d'appareil photo pour les professionnelles et pour les particuliers">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="./Frontend/bootstrap/style.css">
+    <link rel="stylesheet" href="/Frontend/bootstrap/style.css">
     <script src="https://kit.fontawesome.com/4ad49b3714.js" crossorigin="anonymous"></script>
 
     <!-- Titre de la page d'acceuil -->
@@ -18,28 +18,26 @@
 <body>
     
     <!-- Barre de navigation -->
-    <nav>
-        <img src="../Backend/images/logo-Orinoco.png" alt="Orinoco">
-        <div class="onglets">
-            <a class="link" href="../index.html">Accueil</a>
-            <a class="link" href="panier.html">Panier</a>
-            <form>
-                <input type="search" placeholder="Rechercher">
-            </form>
-            <a href="panier.html"><i class="fas fa-shopping-cart"></i></a>
+    <nav class="navbar sticky-top navbar-light bg-light">
+        <div class="container-fluid">
+            <img src="../Backend/images/logo-Orinoco.png" alt=""  class="d-inline-block align-text-top">
+          <a class="nav-link liens" href="/index.html">Accueil</a>
+          <a class="nav-link liens" href="../Frontend/produit.html">Produit</a>
+          <a class="nav-link liens" href="../Frontend/panier.html">Panier</a>
         </div>
-    </nav>
+      </nav>
     <!-- Fin de la barre de navigation -->
 
 
-    <!-- Section Principale -->
+ <!--
     <section id="panierVide">
-        <!--gestion du panier vide-->
         <div class="paniervide text-center">
             <p>Votre panier est vide.</p>
-            <a href="../index.html"><button id="retourAccueil">Accueil</button></a>
+            <a href="../index.html"><button type="button" class="btn btn-outline-info">Accueil</button>
         </div>
     </section>
+    -->
+        <!-- Section Principale -->
 
     <section id="panier">
         <!--panier contenant des produits-->
@@ -68,8 +66,8 @@
                 </table>
             </div>
             <div class="btnPanier">
-                <div><button type="submit" id="validationPanier">Commander</button></div>
-                <div><button type="submit" id="viderPanier">Vider le panier</button></div>
+                <div><button type="button" id="validationPanier">Commander</button></div>
+                <div><button type="button" id="viderPanier">Vider le panier</button></div>
             </div>
         </div>
 
@@ -77,7 +75,7 @@
         <!-- insertion du formulaire de contact si des produits sont dans le panier-->
         <div id="formulaireCommande">
             <p>Merci de compléter ce formulaire afin de valider votre commande.</p>
-            <form>
+            <form action="#" method="POST">
                 <div>
                     <label class="titreForm" for="validationDefault01">Nom</label>
                     <input type="text" class="form-control" id="firstName" placeholder="Ex: 'Diril'" required>
@@ -100,7 +98,7 @@
                 </div>
 
                 <div class="validationCommande">
-                    <button type="submit" class="btnValider" id="order">Passer la commande</button>
+                    <button type="button" class="btnValider" id="order">Passer la commande</button>
                 </div>
             </form>
         </div>
@@ -144,8 +142,5 @@
     <!-- Fin du Footer -->
 
 <script src="./Javascript/panier.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-
 </body>
 </html>

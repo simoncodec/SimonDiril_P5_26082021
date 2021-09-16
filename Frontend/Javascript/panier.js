@@ -23,7 +23,7 @@ function afficherPanier() {
         formulaireCommande.classList.add("d-none");
     } else {
         // si le panier n'est pas vide
-        panierVide.classList.add("d-none");
+        //panierVide.classList.add("d-none");
         formulaireCommande.classList.add("d-none");
         let listeProduitPanier = [];
         // pour chaque objet on créer une boucle qui affichera les produits du localstorage
@@ -74,7 +74,7 @@ function totalPanier() {
 function viderPanier() {
     const btnViderPanier = document.getElementById("viderPanier");
     btnViderPanier.addEventListener("click", (e) => {
-        e.preventDefault;
+        e.preventDefault();
         localStorage.clear();
         location.reload();
     });
@@ -85,7 +85,7 @@ function afficherFormulaire() {
     const btnValidationPanier = document.getElementById("validationPanier");
     const formulaireCommande = document.getElementById("formulaireCommande");
     btnValidationPanier.addEventListener("click", (e) => {
-        e.preventDefault;
+        e.preventDefault();
         formulaireCommande.classList.toggle("d-none");
     });
 }
@@ -105,7 +105,7 @@ function validationFormulaireCommande() {
 
     // on écoute le click sur le bouton commande
     validationCommande.addEventListener("click", (e) => {
-
+        e.preventDefault();
         // condition pour valider si le formulaire est correctement rempli par le client
         if (!regexName.test(nom.value) ||
             !regexName.test(prenom.value) ||
@@ -114,7 +114,7 @@ function validationFormulaireCommande() {
             !regexCity.test(ville.value)) {
             alert("Merci de vérifier que les champs complétés sont corrects.");
         } else {
-            e.preventDefault();
+            
             // création de l'objet contact pour la fiche client
             let products = [];
             let produitsCommandes = JSON.parse(localStorage.getItem("produit"));
