@@ -22,8 +22,8 @@ fetch(newId)
 
 function produitsFiche(produit) 
 {
-    produitImage.innerHTML += `<img src="${produit.imageUrl}" class="imgFicheProduit" alt="${produit.name}">`;
-    produitNom.innerHTML += `<p>${produit.name}</p>`;
+    produitImage.innerHTML += `<img src="${produit.imageUrl}" class="img-fluid" alt="${produit.name}">`;
+    produitNom.innerHTML += `<h5>${produit.name}</h5>`;
     produitDescription.innerHTML += `<p>${produit.description}</p>`;
     
     produitPrix.innerHTML += `<p>${produit.price}</p>`;

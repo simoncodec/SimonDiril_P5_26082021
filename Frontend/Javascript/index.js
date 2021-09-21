@@ -16,7 +16,7 @@ fetch ('http://localhost:3000/api/cameras')
 function getListeProduit(data){
     for (produit of data){
         let liste = document.getElementById("liste");
-        liste.innerHTML +=             `<div class="row mx-3 my-4" style="width: 40rem;">
+        liste.innerHTML +=             `<div class="row mx-3 my-4 boxing" style="width: 40rem;">
         <img src="${produit.imageUrl}" class="card-img-top" alt="${produit.name}">
         <div class="card-body">
           <h5 class="card-title">${produit.name}</h5>

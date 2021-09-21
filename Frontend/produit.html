@@ -39,21 +39,39 @@
 
     <!-- Section Principale -->
 
+
+    <!--
+        <div class="row g-0 bg-light position-relative">
+  <div class="col-md-6 mb-md-0 p-md-4">
+    <img src="..." class="w-100" alt="...">
+  </div>
+  <div class="col-md-6 p-4 ps-md-0">
+    <h5 class="mt-0">Columns with stretched link</h5>
+    <p>Another instance of placeholder content for this other custom component. It is intended to mimic what some real-world content would look like, and we're using it here to give the component a bit of body and size.</p>
+    <a href="#" class="stretched-link">Go somewhere</a>
+  </div>
+</div>
+    -->
+
     <section>
-        <div id="produits">
-            <div class="card-img-top" id="imgProduit"></div>
-            <div class="produit_nomprix">
-                <div id="nomProduit"></div>
-                <div id="prixProduit"></div>
+        <div id="produits" class="row g-0 bg-light position-relative">
+            <div class="col-md-6 mb-md-0 p-md-4">
+                <div class="card-img-top" id="imgProduit"></div>
             </div>
+            <div class="col-md-6 p-4 ps-md-0">
+                <div class="produit_nomprix">
+                    <div id="nomProduit"></div>
+                    <div id="prixProduit"></div>
+                </div>
             <div id="descriptionProduit"></div>
             <div class="option_choixObjectif">
                 <div id="objectifProduits">
                     <label for="choixObjectif">Objectif :</label>
                     <select name="objectif" id="choixObjectif"></select>
                 </div>
+
                 <form id="quantiteProduit">
-                    <select id="quantite">
+                    <select class="form-select" aria-label="Default select example" id="quantite">
                     <option selected value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -61,13 +79,14 @@
                 </select>
                 </form>
                 <div class="addpanier">
-                    <button id="btnAjoutPanier" type="submit" name="btnAjoutPanier">Ajouter au panier</button>
+                    <button id="btnAjoutPanier" type="button" class="btn btn-info">Acheter ce produit</button>
                 </div>
             </div>
 
-
+            </div>
         </div>
     </section>
+
 
     <!-- Fin de Section Principale -->
 
