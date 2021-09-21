@@ -20,6 +20,10 @@ a:link
     width: 300px;
 }
 
+.liens
+{
+    color: black!important;
+}
 
 /* Fin de la barre de navigation */
 
@@ -41,6 +45,11 @@ header h1
 {
     max-width: 600px;
     text-align: center;
+}
+
+header h2
+{
+    text-align:center;
 }
 
 
@@ -71,6 +80,10 @@ header button
     margin-top: 7px;
 }
 
+.btn-primary
+{
+    color: black!important;
+}
 
 .btnPanier
 {

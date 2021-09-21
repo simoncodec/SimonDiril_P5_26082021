@@ -21,7 +21,7 @@ function getListeProduit(data){
         liste.innerHTML +=             `<div class="row mx-3 my-4 boxing" style="width: 40rem;">
         <img src="${produit.imageUrl}" class="card-img-top" alt="${produit.name}">
         <div class="card-body">
-          <h5 class="card-title">${produit.name}</h5>
+          <h4 class="card-title">${produit.name}</h4>
           <p class="card-text">${price}</p>
           <a href="./Frontend/produit.html?_id=${produit._id}" class="btn btn-primary"> Acheter ce produit</a></div>
         </div>`;
