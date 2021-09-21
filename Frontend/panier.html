@@ -28,15 +28,6 @@
       </nav>
     <!-- Fin de la barre de navigation -->
 
-
- <!--
-    <section id="panierVide">
-        <div class="paniervide text-center">
-            <p>Votre panier est vide.</p>
-            <a href="../index.html"><button type="button" class="btn btn-outline-info">Accueil</button>
-        </div>
-    </section>
-    -->
         <!-- Section Principale -->
 
     <section id="panier">
@@ -45,17 +36,18 @@
             <h2> Mon Panier</h2>
             <!--création d'un tableau pour le contenu de mon panier-->
             <div id="listePanier">
-                <table>
+                <table class="table table-striped" id="listePanier">
                     <thead>
-                        <tr>
-                            <th class="titreTableau">Nom</th>
-                            <th class="titreTableau">Objectif</th>
-                            <th class="titreTableau">Quantité</th>
-                            <th class="titreTableau">Prix</th>
-                        </tr>
+                      <tr>
+                        <th scope="col titreTableau">Nom</th>
+                        <th scope="col titreTableau">Objectif</th>
+                        <th scope="col titreTableau">Quantité</th>
+                        <th scope="col titreTableau">Prix</th>
+                      </tr>
                     </thead>
-                    <!-- insertion des produits ajoutés dans le tableau créé précedemment-->
-                    <tbody id="listeProduitPanier"></tbody>
+                    
+                    <tbody id="listeProduitPanier">
+                    </tbody>
                     <tfoot>
                         <tr>
                             <th colspan="2"></th>
@@ -63,13 +55,14 @@
                             <th colspan="1" id="totalPanier"></th>
                         </tr>
                     </tfoot>
-                </table>
+                  </table>
             </div>
-            <div class="btnPanier">
-                <div><button type="button" id="validationPanier">Commander</button></div>
-                <div><button type="button" id="viderPanier">Vider le panier</button></div>
+            <div class="d-flex justify-content-around btnPanier">
+                <div><button type="button" id="validationPanier" class="btn btn-success">Commander</button></div>
+                <div><button type="button" id="viderPanier" class="btn btn-danger">Vider le panier</button></div>
             </div>
         </div>
+
 
 
         <!-- insertion du formulaire de contact si des produits sont dans le panier-->
@@ -141,6 +134,6 @@
     </footer>
     <!-- Fin du Footer -->
 
-<script src="./Javascript/panier.js"></script>
+<script src="/Frontend/Javascript/panier.js"></script>
 </body>
 </html>

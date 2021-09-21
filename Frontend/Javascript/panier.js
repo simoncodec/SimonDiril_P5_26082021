@@ -29,11 +29,10 @@ function afficherPanier() {
         // pour chaque objet on créer une boucle qui affichera les produits du localstorage
         for (cpt = 0; cpt < localS.length; cpt++) {
             listeProduitPanier = listeProduitPanier + `
-        <tr class="tableau">
-        <td class="liste"><span>${localS[cpt].name}</span></td>
-        <td class="liste"><span>${localS[cpt].objectif}</span></td>
-        <td class="liste"><span>${localS[cpt].quantite}</span></td>
-        <td class="liste"><span>${localS[cpt].price},00 €</span></td>
+        <th scope="col titreTableau">${localS[cpt].name}</th>
+        <th scope="col titreTableau">${localS[cpt].lenses}</th>
+        <th scope="col titreTableau">${localS[cpt].quantite}</th>
+        <th scope="col titreTableau">${localS[cpt].price}€</th>
         </tr>`;
         }
         if (cpt == localS.length) {
@@ -42,6 +41,8 @@ function afficherPanier() {
         }
     }
 }
+
+
 
 // calcul du montant total du panier
 function totalPanier() {

@@ -25,9 +25,7 @@ function produitsFiche(produit)
     produitImage.innerHTML += `<img src="${produit.imageUrl}" class="img-fluid" alt="${produit.name}">`;
     produitNom.innerHTML += `<h5>${produit.name}</h5>`;
     produitDescription.innerHTML += `<p>${produit.description}</p>`;
-    
     produitPrix.innerHTML += `<p>${produit.price}</p>`;
-
 }
 
 function lensesChoice(product) 
@@ -56,7 +54,7 @@ function ajoutPanier()
         const idQuantite = document.getElementById("quantite");
         const choixQuantite = idQuantite.value;
 
-        // création de l'obet pour l'ajout au panier
+        // création de l'objet pour l'ajout au panier
         let newProduit = {
             imageUrl: produitImage.innerHTML,
             name: produitNom.innerHTML,
