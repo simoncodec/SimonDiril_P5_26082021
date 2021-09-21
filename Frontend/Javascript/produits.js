@@ -13,7 +13,7 @@ fetch(newId)
     .then ((produit) => {
         produitsFiche(produit);
         lensesChoice(produit);
-        ajoutPanier();
+        ajoutPanier(produit);
     })
 
     .catch(function(error) {
@@ -25,20 +25,23 @@ function produitsFiche(produit)
     produitImage.innerHTML += `<img src="${produit.imageUrl}" class="img-fluid" alt="${produit.name}">`;
     produitNom.innerHTML += `<h5>${produit.name}</h5>`;
     produitDescription.innerHTML += `<p>${produit.description}</p>`;
-    produitPrix.innerHTML += `<p>${produit.price}</p>`;
+    produit.price = produit.price /100;
+    console.log(produitPrix);
+    produitPrix.innerHTML = new Intl.NumberFormat("fr-FR", { style: 'currency', currency: 'EUR', code: "€", }).format(produit.price);
+
 }
 
-function lensesChoice(product) 
+function lensesChoice(produit) 
 {
     const versionChoice = document.getElementById("choixObjectif");
-    for (let lenses of product.lenses) 
+    for (let lenses of produit.lenses) 
     {
         versionChoice.innerHTML += `<option value="${lenses}">${lenses}</option>`;
     }
 }
 
 
-function ajoutPanier() 
+function ajoutPanier(produit)
 {
     // création de la constante du btn
     const btnAjoutPanier = document.getElementById("btnAjoutPanier");
@@ -53,12 +56,12 @@ function ajoutPanier()
         // création constante pour choix de la quantité et récupération de la valeur
         const idQuantite = document.getElementById("quantite");
         const choixQuantite = idQuantite.value;
-
+        console.log(produitPrix.innerHTML.replace(" ",""))
+        console.log(parseFloat(produitPrix.innerHTML))
         // création de l'objet pour l'ajout au panier
         let newProduit = {
-            imageUrl: produitImage.innerHTML,
-            name: produitNom.innerHTML,
-            price: parseFloat(produitPrix.innerHTML),
+            name: produit.name,
+            price: produit.price,
             lenses: choixObjectif,
             quantite: choixQuantite,
             _id: urlID

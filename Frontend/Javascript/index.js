@@ -16,14 +16,20 @@ fetch ('http://localhost:3000/api/cameras')
 function getListeProduit(data){
     
     for (produit of data){
-        console.log(produit._id)
         let liste = document.getElementById("liste");
+        let price = conversionPrix(produit.price);
         liste.innerHTML +=             `<div class="row mx-3 my-4 boxing" style="width: 40rem;">
         <img src="${produit.imageUrl}" class="card-img-top" alt="${produit.name}">
         <div class="card-body">
           <h5 class="card-title">${produit.name}</h5>
-          <p class="card-text">${produit.price}</p>
+          <p class="card-text">${price}</p>
           <a href="./Frontend/produit.html?_id=${produit._id}" class="btn btn-primary"> Acheter ce produit</a></div>
         </div>`;
     }
+}
+
+function conversionPrix(produitPrix) {
+    let prix = `${produitPrix}`;
+    prix = Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR', code: "€", }).format(prix / 100);
+    return prix;
 }
