@@ -23,7 +23,7 @@ function afficherPanier() {
         formulaireCommande.classList.add("d-none");
     } else {
         // si le panier n'est pas vide
-        //panierVide.classList.add("d-none");
+        panierVide.classList.add("d-none");
         formulaireCommande.classList.add("d-none");
         let listeProduitPanier = [];
         // pour chaque objet on créer une boucle qui affichera les produits du localstorage
