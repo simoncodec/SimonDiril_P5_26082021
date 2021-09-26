@@ -1,4 +1,5 @@
 
+
 fetch ('http://localhost:3000/api/cameras')
 .then ((response ) => response.json())
 .then ((data) => {
@@ -9,7 +10,7 @@ fetch ('http://localhost:3000/api/cameras')
 // cas d'erreur
 
 .catch(function(error){
-    alert(error)
+    alert("desoler une erreur technique empêche d’afficher les produits")
 })
 
 // creation de la fonction qui permets de recuperé les elements en backend
