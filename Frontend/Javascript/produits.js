@@ -28,7 +28,7 @@ function produitsFiche(produit)
     produit.price = produit.price /100;
     console.log(produitPrix);
     produitPrix.innerHTML = new Intl.NumberFormat("fr-FR", { style: 'currency', currency: 'EUR', code: "€", }).format(produit.price);
-
+    console.log(produitsFiche);
 }
 
 function lensesChoice(produit) 
